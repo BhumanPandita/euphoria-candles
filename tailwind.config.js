@@ -14,7 +14,7 @@ export default {
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Inter', 'Helvetica Neue', 'sans-serif'],
+        sans: ['Inter', '"Helvetica Neue"', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.25em',

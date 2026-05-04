@@ -17,6 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
+    onScroll() // sync initial state on mount
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -32,31 +33,34 @@ export default function Navbar() {
         scrolled ? 'shadow-sm' : ''
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Left nav — hidden on mobile */}
+      {/* h-16 — keep pt-16 in App.jsx in sync if navbar height changes */}
+      <div className="max-w-6xl mx-auto px-6 h-16 grid grid-cols-[1fr_auto_1fr] items-center">
+        {/* Left nav */}
         <nav className="hidden md:flex gap-8">
           {leftLinks.map((l) => (
             <NavLink key={l.to} to={l.to} className={linkClass}>{l.label}</NavLink>
           ))}
         </nav>
 
-        {/* Logo — center */}
-        <Link to="/" className="font-serif text-xl text-brown-deep tracking-wide absolute left-1/2 -translate-x-1/2">
+        {/* Logo — center cell of grid */}
+        <Link to="/" className="font-serif text-xl text-brown-deep tracking-wide text-center">
           Euphoria Candles
         </Link>
 
-        {/* Right nav — hidden on mobile */}
-        <nav className="hidden md:flex gap-8">
+        {/* Right nav */}
+        <nav className="hidden md:flex gap-8 justify-end">
           {rightLinks.map((l) => (
             <NavLink key={l.to} to={l.to} className={linkClass}>{l.label}</NavLink>
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — right cell */}
         <button
-          className="md:hidden ml-auto text-brown-deep"
+          className="md:hidden justify-self-end text-brown-deep"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-nav"
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -64,7 +68,10 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="md:hidden bg-cream border-t border-blush px-6 py-6 flex flex-col gap-5">
+        <nav
+          id="mobile-nav"
+          className="md:hidden bg-cream border-t border-blush px-6 py-6 flex flex-col gap-5"
+        >
           {[...leftLinks, ...rightLinks].map((l) => (
             <NavLink
               key={l.to}
@@ -75,7 +82,7 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
-        </div>
+        </nav>
       )}
     </header>
   )

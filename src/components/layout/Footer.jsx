@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Instagram } from 'lucide-react'
+import { INSTAGRAM_URL, WHATSAPP_URL } from '../../data/constants'
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
 
         <div className="flex gap-4">
           <a
-            href="https://www.instagram.com/euphoriacandles040/"
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noreferrer"
             className="text-blush hover:text-gold transition-colors duration-200"
@@ -36,7 +37,7 @@ export default function Footer() {
             <Instagram size={20} />
           </a>
           <a
-            href="https://wa.me/91XXXXXXXXXX"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
             className="text-blush hover:text-gold transition-colors duration-200"

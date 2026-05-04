@@ -1,6 +1,6 @@
-export default function TestimonialCard({ testimonial }) {
+export default function TestimonialCard({ testimonial, className = '' }) {
   return (
-    <div className="bg-white p-8 rounded-sm shadow-sm min-w-72 max-w-sm flex-shrink-0">
+    <div className={`bg-white p-8 rounded-sm shadow-sm ${className}`}>
       <div className="text-gold font-serif text-4xl leading-none mb-4">"</div>
       <p className="font-serif italic text-brown-mid text-base leading-relaxed mb-6">
         {testimonial.quote}

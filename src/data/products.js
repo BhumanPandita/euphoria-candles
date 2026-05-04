@@ -3,6 +3,7 @@ export const products = [
     id: 1,
     name: 'Lavender Bliss',
     category: 'Candles',
+    categoryId: 'candles',
     price: 549,
     size: '100g',
     image: null,
@@ -13,6 +14,7 @@ export const products = [
     id: 2,
     name: 'Rose Amber Jar',
     category: 'Wedding',
+    categoryId: 'wedding',
     price: 699,
     size: '150g',
     image: null,
@@ -23,6 +25,7 @@ export const products = [
     id: 3,
     name: 'Sandalwood Luxe',
     category: 'Corporate',
+    categoryId: 'corporate',
     price: 799,
     size: '200g',
     image: null,
@@ -33,6 +36,7 @@ export const products = [
     id: 4,
     name: 'Mini Bloom Set',
     category: 'Return Gifts',
+    categoryId: 'return-gifts',
     price: 299,
     size: '50g × 3',
     image: null,
@@ -43,6 +47,7 @@ export const products = [
     id: 5,
     name: 'Citrus Morning',
     category: 'Candles',
+    categoryId: 'candles',
     price: 499,
     size: '100g',
     image: null,
@@ -53,6 +58,7 @@ export const products = [
     id: 6,
     name: 'Jasmine Serenade',
     category: 'Wedding',
+    categoryId: 'wedding',
     price: 649,
     size: '150g',
     image: null,
@@ -61,4 +67,4 @@ export const products = [
   },
 ]
 
-export const categories = ['All', 'Candles', 'Return Gifts', 'Corporate', 'Wedding']
+export const categoryFilterList = ['All', 'Candles', 'Return Gifts', 'Corporate', 'Wedding']

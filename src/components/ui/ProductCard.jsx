@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { buttonClasses } from './Button'
 
 const categoryColors = {
   Candles: 'text-brown-mid',
-  Wedding: 'text-rose-400',
-  Corporate: 'text-blue-400',
-  'Return Gifts': 'text-emerald-500',
+  Wedding: 'text-gold',
+  Corporate: 'text-brown-light',
+  'Return Gifts': 'text-brown-deep',
 }
 
 export default function ProductCard({ product }) {
@@ -31,10 +32,7 @@ export default function ProductCard({ product }) {
         </p>
         <h3 className="font-serif text-lg text-brown-deep mb-1">{product.name}</h3>
         <p className="font-sans text-sm text-brown-light mb-4">₹ {product.price} · {product.size}</p>
-        <Link
-          to="/contact"
-          className="block text-center font-sans text-xs tracking-widest uppercase bg-brown-deep text-cream py-2.5 hover:bg-gold transition-colors duration-200"
-        >
+        <Link to="/contact" className={buttonClasses('solid', 'block text-center py-2.5 px-0')}>
           Enquire Now
         </Link>
       </div>

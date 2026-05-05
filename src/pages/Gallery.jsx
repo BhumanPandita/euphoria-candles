@@ -1,23 +1,12 @@
 import { motion } from 'framer-motion'
 import SectionTitle from '../components/ui/SectionTitle'
 import { INSTAGRAM_URL } from '../data/constants'
+import { galleryImages } from '../data/images'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (i) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: i * 0.07 } }),
 }
-
-const placeholders = [
-  { id: 1, label: 'Lavender Bliss', tall: true },
-  { id: 2, label: 'Rose Amber Jar', tall: false },
-  { id: 3, label: 'Mini Bloom Set', tall: false },
-  { id: 4, label: 'Sandalwood Luxe', tall: false },
-  { id: 5, label: 'Wedding Collection', tall: true },
-  { id: 6, label: 'Corporate Gifting', tall: false },
-  { id: 7, label: 'Citrus Morning', tall: false },
-  { id: 8, label: 'Jasmine Serenade', tall: true },
-  { id: 9, label: 'Custom Order', tall: false },
-]
 
 export default function Gallery() {
   return (
@@ -33,7 +22,7 @@ export default function Gallery() {
 
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto columns-2 md:columns-3 gap-4 space-y-4">
-          {placeholders.map((item, i) => (
+          {galleryImages.map((item, i) => (
             <motion.div
               key={item.id}
               custom={i}
@@ -41,16 +30,10 @@ export default function Gallery() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className={`break-inside-avoid bg-linen overflow-hidden group relative ${item.tall ? 'h-72' : 'h-48'}`}
+              className={`break-inside-avoid overflow-hidden group relative ${item.tall ? 'h-72' : 'h-48'}`}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex gap-2 items-end opacity-25">
-                  <div className="w-4 h-12 bg-gold rounded-t-sm" />
-                  <div className="w-6 h-16 bg-gold rounded-t-sm" />
-                  <div className="w-3 h-9 bg-gold rounded-t-sm" />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-brown-deep opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
+              <img src={item.src} alt={item.label} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-brown-deep opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="font-serif text-sm italic text-cream">{item.label}</p>
               </div>

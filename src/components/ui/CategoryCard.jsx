@@ -1,22 +1,32 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { categoryImages } from '../../data/images'
 
 export default function CategoryCard({ category }) {
+  const imgSrc = categoryImages[category.id]
+
   return (
-    <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+    <motion.div whileHover={{ y: -4, scale: 1.02 }} transition={{ duration: 0.3 }} className="h-full">
       <Link
         to={`/shop?category=${category.id}`}
-        className="flex flex-col items-center text-center p-6 bg-white rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 group"
+        className="relative flex flex-col justify-end overflow-hidden rounded-sm shadow-md group h-full min-h-[220px]"
       >
-        <span className="text-4xl mb-4">{category.emoji}</span>
-        <h3 className="font-serif text-lg text-brown-deep mb-1 group-hover:text-gold transition-colors duration-200">
-          {category.label}
-        </h3>
-        <p className="font-sans text-xs text-brown-light mb-4 leading-relaxed">{category.description}</p>
-        <span className="flex items-center gap-1 font-sans text-xs tracking-widest uppercase text-gold">
-          Shop <ArrowRight size={12} />
-        </span>
+        {imgSrc && (
+          <img
+            src={imgSrc}
+            alt={category.label}
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-brown-deep/90 via-brown-deep/40 to-transparent" />
+        <div className="relative z-10 p-5">
+          <span className="text-2xl block mb-1">{category.emoji}</span>
+          <h3 className="font-serif text-lg text-cream leading-tight mb-1">{category.label}</h3>
+          <span className="flex items-center gap-1 font-sans text-xs tracking-widest uppercase text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Shop <ArrowRight size={11} />
+          </span>
+        </div>
       </Link>
     </motion.div>
   )

@@ -24,7 +24,7 @@ function Hero() {
         className="absolute inset-0 w-full h-full object-cover scale-105"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-crimson/80 via-crimson/50 to-crimson/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brown-deep/85 via-brown-deep/50 to-brown-deep/80" />
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-cream to-transparent z-10" />
       <motion.div
         initial={{ opacity: 0, y: 32 }}
@@ -122,7 +122,7 @@ function FeaturedProducts() {
 
 function BrandStory() {
   return (
-    <section className="py-24 px-6 bg-crimson">
+    <section className="py-24 px-6 bg-brown-deep">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <p className="font-sans text-xs tracking-[0.25em] uppercase text-gold mb-4">Our story</p>
@@ -168,7 +168,7 @@ function Testimonials() {
         </motion.div>
         <div className="flex gap-6 mt-12 overflow-x-auto pb-4 scrollbar-hide">
           {testimonials.map((t) => (
-            <TestimonialCard key={t.id} testimonial={t} className="min-w-72 max-w-sm flex-shrink-0" />
+            <TestimonialCard key={t.id} testimonial={t} className="min-w-80 max-w-sm flex-shrink-0" />
           ))}
         </div>
       </div>

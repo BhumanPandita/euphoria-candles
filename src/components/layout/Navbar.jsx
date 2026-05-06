@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream ${
-        scrolled ? 'shadow-sm border-b border-crimson/20' : ''
+        scrolled ? 'shadow-sm border-b border-gold/40' : ''
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 grid grid-cols-[1fr_auto_1fr] items-center">

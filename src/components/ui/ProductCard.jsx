@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import { buttonClasses } from './Button'
 
 const categoryColors = {
-  Candles: 'text-brown-mid',
-  Wedding: 'text-gold',
-  Corporate: 'text-brown-light',
-  'Return Gifts': 'text-brown-deep',
+  Candles: 'text-gold',
+  Wedding: 'text-crimson',
+  Corporate: 'text-brown-mid',
+  'Return Gifts': 'text-gold',
 }
 
 export default function ProductCard({ product }) {

@@ -11,7 +11,7 @@ const fadeUp = {
 
 const occasions = ['Wedding', 'Corporate', 'Return Gift', 'General Enquiry']
 
-const inputClass = 'w-full font-sans text-sm text-brown-deep bg-white border border-blush px-4 py-3 rounded-sm focus:outline-none focus:border-gold transition-colors duration-200 placeholder:text-brown-light'
+const inputClass = 'w-full font-sans text-sm text-brown-deep bg-white border border-blush px-4 py-3 rounded-sm focus:outline-none focus:border-crimson transition-colors duration-200 placeholder:text-brown-light'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', occasion: '', message: '' })
@@ -69,7 +69,7 @@ export default function Contact() {
                   <label className="block font-sans text-xs tracking-widest uppercase text-brown-light mb-2">Message *</label>
                   <textarea name="message" required rows={4} value={form.message} onChange={handleChange} placeholder="Tell us about your requirements — quantity, occasion date, preferred scents..." className={`${inputClass} resize-none`} />
                 </div>
-                <Button type="submit" variant="gold" className="w-full">Send Enquiry</Button>
+                <Button type="submit" variant="solid" className="w-full py-4">Send Enquiry</Button>
               </form>
             )}
           </motion.div>
@@ -88,7 +88,7 @@ export default function Contact() {
             <div>
               <p className="font-sans text-xs tracking-widest uppercase text-gold mb-3">Follow us</p>
               <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"
-                className="font-sans text-sm text-brown-mid hover:text-gold transition-colors duration-200">
+                className="font-sans text-sm text-brown-mid hover:text-crimson transition-colors duration-200">
                 @euphoriacandles040
               </a>
             </div>

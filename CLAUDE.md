@@ -46,7 +46,8 @@ Tailwind v3 with a custom brand palette defined in `tailwind.config.js`:
 | `cream` | `#FAF8F5` | Page backgrounds |
 | `linen` | `#F0EBE3` | Section alternates |
 | `blush` | `#E8D5C4` | Subtle accents, hero subtext |
-| `gold` | `#C4A882` | Secondary accent, outline CTAs |
+| `gold` | `#BF9238` | Secondary accent, outline CTAs |
+| `ember` | `#130D08` | Ultra-dark moody sections |
 | `crimson` | `#8B1A1A` | **Primary brand color** — buttons, active states, overlays |
 | `crimson-deep` | `#6B1212` | Button hover state |
 | `brown-deep` | `#5C4A36` | Headings and body text |

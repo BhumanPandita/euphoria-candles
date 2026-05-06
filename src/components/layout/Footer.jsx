@@ -4,7 +4,7 @@ import Logo from '../ui/Logo'
 
 export default function Footer() {
   return (
-    <footer className="bg-brown-deep text-cream py-12 px-6">
+    <footer className="bg-ember text-cream py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-8">
         <Link to="/" className="flex items-center justify-center">
           <Logo size={64} variant="white" />

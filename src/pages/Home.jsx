@@ -24,7 +24,7 @@ function Hero() {
         className="absolute inset-0 w-full h-full object-cover scale-105"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-brown-deep/85 via-brown-deep/50 to-brown-deep/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ember/90 via-ember/55 to-ember/85" />
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-cream to-transparent z-10" />
       <motion.div
         initial={{ opacity: 0, y: 32 }}
@@ -49,10 +49,10 @@ function Hero() {
           corporate gifting & everyday joy.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/shop" className="font-sans text-xs tracking-[0.2em] uppercase bg-gold text-cream px-10 py-4 hover:bg-cream hover:text-crimson transition-all duration-300">
+          <Link to="/shop" className="font-sans text-xs tracking-[0.2em] uppercase bg-crimson text-cream px-10 py-4 hover:bg-crimson-deep transition-all duration-300">
             Explore Collection
           </Link>
-          <Link to="/contact" className="font-sans text-xs tracking-[0.2em] uppercase border border-cream/70 text-cream px-10 py-4 hover:bg-cream hover:text-crimson transition-all duration-300">
+          <Link to="/contact" className="font-sans text-xs tracking-[0.2em] uppercase border border-gold/80 text-gold px-10 py-4 hover:bg-gold hover:text-ember hover:border-gold transition-all duration-300">
             Get a Quote
           </Link>
         </div>
@@ -122,7 +122,7 @@ function FeaturedProducts() {
 
 function BrandStory() {
   return (
-    <section className="py-24 px-6 bg-brown-deep">
+    <section className="py-24 px-6 bg-ember">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <p className="font-sans text-xs tracking-[0.25em] uppercase text-gold mb-4">Our story</p>

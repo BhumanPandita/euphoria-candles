@@ -44,8 +44,8 @@ export default function Shop() {
               onClick={() => setActive(cat)}
               className={`font-sans text-xs tracking-widest uppercase whitespace-nowrap pb-1 transition-colors duration-200 ${
                 active === cat
-                  ? 'text-brown-deep border-b-2 border-gold'
-                  : 'text-brown-light hover:text-brown-deep'
+                  ? 'text-crimson border-b-2 border-crimson'
+                  : 'text-brown-light hover:text-crimson'
               }`}
             >
               {cat}

@@ -1,9 +1,9 @@
 const base = 'inline-block font-sans text-xs tracking-widest uppercase transition-all duration-200 px-6 py-3 rounded-sm'
 
 const variantClasses = {
-  solid: 'bg-brown-deep text-cream hover:bg-gold',
+  solid: 'bg-crimson text-cream hover:bg-crimson-deep',
   outline: 'border border-gold text-gold hover:bg-gold hover:text-cream',
-  gold: 'bg-gold text-cream hover:bg-brown-deep',
+  gold: 'bg-gold text-cream hover:bg-crimson',
 }
 
 export function buttonClasses(variant = 'solid', className = '') {

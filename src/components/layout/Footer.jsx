@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { INSTAGRAM_URL, WHATSAPP_URL } from '../../data/constants'
+import Logo from '../ui/Logo'
 
 export default function Footer() {
   return (
     <footer className="bg-brown-deep text-cream py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-8">
-        <Link to="/" className="font-serif text-2xl tracking-wide">Euphoria Candles</Link>
+        <Link to="/" className="flex items-center justify-center">
+          <Logo size={64} variant="white" />
+        </Link>
 
         <nav className="flex flex-wrap justify-center gap-6">
           {[

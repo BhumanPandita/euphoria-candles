@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import Logo from '../ui/Logo'
 
 const leftLinks = [
   { to: '/about', label: 'About' },
@@ -24,16 +25,15 @@ export default function Navbar() {
 
   const linkClass = ({ isActive }) =>
     `font-sans text-xs tracking-widest uppercase transition-colors duration-200 ${
-      isActive ? 'text-gold' : 'text-brown-mid hover:text-gold'
+      isActive ? 'text-crimson' : 'text-brown-mid hover:text-crimson'
     }`
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 bg-cream ${
-        scrolled ? 'shadow-sm' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream ${
+        scrolled ? 'shadow-sm border-b border-crimson/20' : ''
       }`}
     >
-      {/* h-16 — keep pt-16 in App.jsx in sync if navbar height changes */}
       <div className="max-w-6xl mx-auto px-6 h-16 grid grid-cols-[1fr_auto_1fr] items-center">
         {/* Left nav */}
         <nav className="hidden md:flex gap-8">
@@ -42,9 +42,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Logo — center cell of grid */}
-        <Link to="/" className="font-serif text-xl text-brown-deep tracking-wide text-center">
-          Euphoria Candles
+        {/* Logo — center */}
+        <Link to="/" className="flex items-center justify-center py-1">
+          <Logo size={52} variant="color" />
         </Link>
 
         {/* Right nav */}
@@ -54,9 +54,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile hamburger — right cell */}
+        {/* Mobile hamburger */}
         <button
-          className="md:hidden justify-self-end text-brown-deep"
+          className="md:hidden justify-self-end text-crimson"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}

@@ -33,7 +33,7 @@ export default function Gallery() {
               className={`break-inside-avoid overflow-hidden group relative ${item.tall ? 'h-72' : 'h-48'}`}
             >
               <img src={item.src} alt={item.label} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-brown-deep opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-crimson opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="font-serif text-sm italic text-cream">{item.label}</p>
               </div>
